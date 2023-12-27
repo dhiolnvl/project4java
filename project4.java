@@ -86,6 +86,10 @@ public class project4 {
                     putar = false; //EXIT
                     break;
                 }
+                default: {            //JIKA MEMILIH SELAIN 1 - 8
+                    JOptionPane.showMessageDialog(null,"MOHON PILIH 1 - 8");
+                    break;
+                }
             }
         } while (putar);
     }
