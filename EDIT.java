@@ -8,15 +8,15 @@ public class EDIT {
 
     static void edit() {
         do {
-            if (x == -1) {
+            if (x == -1) {                //JIKA DATA BELUM DIINPUT
                 JOptionPane.showMessageDialog(null, "TIDAK ADA DATA");
                 ulang = "t";
-            } else {
+            } else {                      //JIKA DATA SUDAH DIINPUT
                 do {
                     try {
                         do {
                             ruang = true;
-                            nr = JOptionPane.showInputDialog("NOMOR RUANG [1 - " + (x + 1) + "]");
+                            nr = JOptionPane.showInputDialog("NOMOR RUANG [1 - " + (x + 1) + "]");//MEMILIH DATA YANG AKAN DIEDIT
                             ed = Integer.parseInt(nr);
                             if (ed >= 1 & (ed <= x + 1)) {
                                 ruang = false;
@@ -28,7 +28,7 @@ public class EDIT {
                         salah = true;
                     }
                 } while (salah);
-
+                                                //IDENTIFIKASI KETERANGAN JENIS USAHA
                 switch (jenus[ed - 1]) {
                     case "1": {
                         ket = "PAKAIAN";
@@ -71,7 +71,7 @@ public class EDIT {
                         break;
                     }
                 }
-
+                                    //IDENTIFIKASI KETERANGAN PENJUALAN
                 if ("D".equals(penjualan[ed - 1]) || "d".equals(penjualan[ed - 1])) {
                     ket2 = "DALAM NEGERI";
                 } else if ("L".equals(penjualan[ed - 1]) || "l".equals(penjualan[ed - 1])) {
@@ -79,7 +79,7 @@ public class EDIT {
                 } else {
                     ket2 = "DALAM DAN LUAR NEGERI";
                 }
-
+                                    //IDENTIFIKASI KETERANGAN PEMBELIAN
                 if ("D".equals(pembelian[ed - 1]) || "d".equals(pembelian[ed - 1])) {
                     ket3 = "DOMESTIK";
                 } else if ("L".equals(pembelian[ ed- 1]) || "l".equals(pembelian[ed - 1])) {
@@ -87,13 +87,13 @@ public class EDIT {
                 } else {
                     ket3 = "CAMPURAN";
                 }
-
+                                    //IDENTIFIKASI KETERANGAN CABANG
                 if ("T".equals(cabang[ed - 1]) || "t".equals(cabang[ed - 1])) {
                     ket4 = "TIDAK ADA";
                 } else {
                     ket4 = "ADA";
                 }
-
+                                    //IDENTIFIKASI KETERANGAN SOSMED
                 switch (sosmed[ed - 1]) {
                     case "1": {
                         ket5 = "FACEBOOK";
@@ -116,18 +116,18 @@ public class EDIT {
                         break;
                     }
                 }
-
+                                    //IDENTIFIKASI KETERANGAN STATUS
                 if ("N".equals(status[ed - 1]) || "n".equals(status[ed - 1])) {
                     ket6 = "NIKAH";
                 } else {
                     ket6 = "BELUM";
                 }
-
+                                    //IDENTIFIKASI KETERANGAN KERJASAMA
                 if ("Y".equals(kerjasama[ed - 1]) || "y".equals(kerjasama[ed - 1])) {
                     ket7 = "ADA KERJASAMA";
                 } else {
                     ket7 = "TIDAK ADA KERJASAMA";
-                }
+                }                                //REKAP DATA YANG DIPILIH
                 hasil += "                                             DATA PEDAGANG           \n";
                 hasil += "==========================================================\n";
                 hasil += "NAMA TOKO    = " + nama[ed- 1] + "\n";
@@ -148,7 +148,7 @@ public class EDIT {
                 JOptionPane.showMessageDialog(null, hasil, "LAPORAN DATA PEDAGANG NO " + ed + " YANG AKAN DIEDIT", JOptionPane.INFORMATION_MESSAGE);
                 hasil = "";
 
-                edit = JOptionPane.showInputDialog("DATA YANG AKAN DIEDIT \n"
+                edit = JOptionPane.showInputDialog("DATA YANG AKAN DIEDIT \n" //MEMILIH YANG AKAN DIEDIT
                         + "1. NAMA TOKO \n"
                         + "2. ALAMAT \n"
                         + "3. NAMA PEMILIK \n"
@@ -165,22 +165,22 @@ public class EDIT {
                         + "14. EDIT KESELURUHAN \n"
                         + "[PILIH 1-14]");
                 switch (edit) {
-                    case "1": {
+                    case "1": {        //EDIT NAMA TOKO
                         na = JOptionPane.showInputDialog("NAMA TOKO");
                         nama[ed - 1] = na;
                         break;
                     }
-                    case "2": {
+                    case "2": {        //EDIT ALAMAT
                         al = JOptionPane.showInputDialog("ALAMAT");
                         alamat[ed - 1] = al;
                         break;
                     }
-                    case "3": {
+                    case "3": {        //EDIT NAMA PEMILIK
                         np = JOptionPane.showInputDialog("NAMA PEMILIK");
                         pemilik[ed - 1] = np;
                         break;
                     }
-                    case "4": {
+                    case "4": {        //EDIT JENIS USAHA
                         do {
                             jenis = JOptionPane.showInputDialog("JENIS USAHA \n"
                                     + "1. PAKAIAN \n"
@@ -229,7 +229,7 @@ public class EDIT {
                         jenus[ed - 1] = jenis;
                         break;
                     }
-                    case "5": {
+                    case "5": {        //EDIT MODAL
                         do {
                             try {
                                 mod = JOptionPane.showInputDialog("MODAL");
@@ -243,7 +243,7 @@ public class EDIT {
                         modal[ed - 1] = nmo;
                         break;
                     }
-                    case "6": {
+                    case "6": {        //EDIT PENJUALAN
                         do {
                             pj = JOptionPane.showInputDialog("PENJUALAN \n"
                                     + "D. DALAM NEGERI \n"
@@ -262,7 +262,7 @@ public class EDIT {
 
                         break;
                     }
-                    case "7": {
+                    case "7": {        //EDIT PEMBELI
                         do {
                             pb = JOptionPane.showInputDialog("PEMBELI \n"
                                     + "D. DOMESTIK \n"
@@ -280,7 +280,7 @@ public class EDIT {
                         }
                         break;
                     }
-                    case "8": {
+                    case "8": {        //EDIT CABANG
                         do {
                             cb = JOptionPane.showInputDialog("CABANG \n"
                                     + "T. TIDAK ADA  A. ADA\n");
@@ -294,12 +294,12 @@ public class EDIT {
                         }
                         break;
                     }
-                    case "9": {
+                    case "9": {        //EDIT EMAIL
                         ale = JOptionPane.showInputDialog("ALAMAT EMAIL");
                         email[ed - 1] = ale;
                         break;
                     }
-                    case "10": {
+                    case "10": {        //EDIT SOSMED
                         do {
                             sm = JOptionPane.showInputDialog("SOSIAL MEDIA \n"
                                     + "1. FACEBOOK  \n2. WHATSAPP  \n3. INSTAGRAM  \n4. TELEGRAM  \n5. DLL");
@@ -329,7 +329,7 @@ public class EDIT {
                         sosmed[ed - 1] = sm;
                         break;
                     }
-                    case "11": {
+                    case "11": {        //EDIT NOMOR TELEPON
                         do {
                             try {
                                 hp = JOptionPane.showInputDialog("NO TELPON / HP");
@@ -342,7 +342,7 @@ public class EDIT {
                         nomor[ed - 1] = hp;
                         break;
                     }
-                    case "12": {
+                    case "12": {        //EDIT STATUS
                         do {
                             st = JOptionPane.showInputDialog("STATUS PEMILIK(NIKAH/BELUM) \n"
                                     + "[N/B]");
@@ -356,7 +356,7 @@ public class EDIT {
                         }
                         break;
                     }
-                    case "13": {
+                    case "13": {        //EDIT KERJASAMA
                         do {
                             ks = JOptionPane.showInputDialog("KERJASAMA DENGAN PERUSAHAAN/ORANGLAIN \n"
                                     + "[Y/T]");
@@ -369,7 +369,7 @@ public class EDIT {
                         }
                         break;
                     }
-                    case "14": {
+                    case "14": {            //EDIT KESELURUHAN
                         na = JOptionPane.showInputDialog("NAMA TOKO");
                         nama[ed - 1] = na;
                         al = JOptionPane.showInputDialog("ALAMAT");
@@ -541,7 +541,7 @@ public class EDIT {
                         break;
                     }
                 }
-                hasil += "NAMA TOKO = " + nama[ed - 1] + "\n";
+                hasil += "NAMA TOKO = " + nama[ed - 1] + "\n";        //REKAP HASIL EDIT
                 hasil += "ALAMAT = " + alamat[ed - 1] + "\n";
                 hasil += "NAMA PEMILIK = " + pemilik[ed - 1] + "\n";
                 hasil += "JENIS USAHA = " + ket + "\n";
