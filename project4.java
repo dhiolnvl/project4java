@@ -87,7 +87,8 @@ public class project4 {
                     break;
                 }
                 default: {            //JIKA MEMILIH SELAIN 1 - 8
-                    JOptionPane.showMessageDialog(null,"MOHON PILIH 1 - 8");
+                    JOptionPane.showMessageDialog(null,"INPUTAN SALAH \nMOHON PILIH 1 - 8");
+                    putar = true;
                     break;
                 }
             }
