@@ -44,20 +44,20 @@ public class INPUT {
     static void input() {
 
         do {
-            if (x == 20) {
+            if (x == 20) {      //JIKA DATA LEBIH DARI 20
                 JOptionPane.showMessageDialog(null, "DATA SUDAH PENUH");
-            } else {
+            } else {            //JIKA DATA KURANG DARI 20
                 do {
                     x = x + 1;
                     no = no + 1;
-                    na = JOptionPane.showInputDialog("NAMA TOKO");
+                    na = JOptionPane.showInputDialog("NAMA TOKO"); //INPUT NAMA TOKO
                     nama[x] = na;
-                    al = JOptionPane.showInputDialog("ALAMAT");
+                    al = JOptionPane.showInputDialog("ALAMAT");  //INPUT ALAMAT
                     alamat[x] = al;
-                    np = JOptionPane.showInputDialog("NAMA PEMILIK");
+                    np = JOptionPane.showInputDialog("NAMA PEMILIK");  //INPUT NAMA PEMILIK
                     pemilik[x] = np;
                     do {
-                        jenis = JOptionPane.showInputDialog("JENIS USAHA \n"
+                        jenis = JOptionPane.showInputDialog("JENIS USAHA \n" //INPUT JENIS USAHA
                                 + "1. PAKAIAN \n"
                                 + "2. SARUNG \n"
                                 + "3. MAKANAN \n"
@@ -111,25 +111,25 @@ public class INPUT {
                     } while (!("1".equals(jenis) || "2".equals(jenis) || "3".equals(jenis) || "4".equals(jenis) || "5".equals(jenis) || "6".equals(jenis) || "7".equals(jenis) || "8".equals(jenis)));
                     jenus[x] = jenis;
                     do {
-                        try {
-                            mod = JOptionPane.showInputDialog("MODAL");
+                        try { 
+                            mod = JOptionPane.showInputDialog("MODAL"); //INPUT MODAL
                             nmo = Integer.parseInt(mod);
                             salah = false;
-                        } catch (Exception e) {
+                        } catch (Exception e) {  //JIKA MENGINPUT SELAIN ANGKA
                             JOptionPane.showMessageDialog(null, "DATA YANG ANDA INPUT SALAH");
                             salah = true;
                         }
                     } while (salah);
                     modal[x] = nmo;
                     do {
-                        pj = JOptionPane.showInputDialog("PENJUALAN \n"
+                        pj = JOptionPane.showInputDialog("PENJUALAN \n" //INPUT PENJUALAN
                                 + "D. DALAM NEGERI \n"
                                 + "L. LUAR NEGERI \n"
                                 + "S. DALAM DAN LUAR NEGERI \n");
                     } while (!("D".equals(pj) || "L".equals(pj) || "S".equals(pj) || "d".equals(pj) || "l".equals(pj) || "s".equals(pj)));
                     penjualan[x] = pj;
-
-                    if ("D".equals(pj) || "d".equals(pj)) {
+                    
+                    if ("D".equals(pj) || "d".equals(pj)) {  //IF UNTUK KETERANGAN PILIHAN
                         ket2 = "DALAM NEGERI";
                         jnd = jnd + 1;
                     } else if ("L".equals(pj) || "l".equals(pj)) {
@@ -141,14 +141,14 @@ public class INPUT {
                     }
 
                     do {
-                        pb = JOptionPane.showInputDialog("PEMBELI \n"
+                        pb = JOptionPane.showInputDialog("PEMBELI \n" //INPUT PEMBELI
                                 + "D. DOMESTIK \n"
                                 + "L. LUAR \n"
                                 + "C. CAMPURAN \n");
                     } while (!("D".equals(pb) || "L".equals(pb) || "C".equals(pb) || "d".equals(pb) || "l".equals(pb) || "c".equals(pb)));
                     pembelian[x] = pb;
 
-                    if ("D".equals(pb) || "d".equals(pb)) {
+                    if ("D".equals(pb) || "d".equals(pb)) {  //IF UNTUK KETERANGAN PILIHAN
                         ket3 = "DOMESTIK";
                         bnd = bnd + 1;
                     } else if ("L".equals(pb) || "l".equals(pb)) {
@@ -160,12 +160,12 @@ public class INPUT {
                     }
 
                     do {
-                        cb = JOptionPane.showInputDialog("CABANG \n"
+                        cb = JOptionPane.showInputDialog("CABANG \n" //INPUT CABANG
                                 + "T. TIDAK ADA  \nA. ADA\n");
                     } while (!("T".equals(cb) || "A".equals(cb) || "t".equals(cb) || "a".equals(cb)));
                     cabang[x] = cb;
 
-                    if ("T".equals(cb) || "t".equals(cb)) {
+                    if ("T".equals(cb) || "t".equals(cb)) {  //IF UNTUK KETERANGAN PILIHAN
                         ket4 = "TIDAK ADA";
                         cnt = cnt + 1;
                     } else {
@@ -173,13 +173,13 @@ public class INPUT {
                         cna = cna + 1;
                     }
 
-                    ale = JOptionPane.showInputDialog("ALAMAT EMAIL");
+                    ale = JOptionPane.showInputDialog("ALAMAT EMAIL");  //INPUT EMAIL
                     email[x] = ale;
-                    if (ale.length() > 1) {
+                    if (ale.length() > 1) {  //JIKA ADA EMAIL
                         tme = tme + 1;
                     }
                     do {
-                        sm = JOptionPane.showInputDialog("SOSIAL MEDIA \n"
+                        sm = JOptionPane.showInputDialog("SOSIAL MEDIA \n"  //INPUT SOSMED
                                 + "1. FACEBOOK  \n2. WHATSAPP  \n3. INSTAGRAM  \n4. TELEGRAM  \n5. DLL");
                         switch (sm) {   //SWITCH CASE UNTUK KETERANGAN PILIHAN
                             case "1": {
@@ -212,43 +212,43 @@ public class INPUT {
                     sosmed[x] = sm;
 
                     do {
-                        hp = JOptionPane.showInputDialog("NO TELPON / HP");
+                        hp = JOptionPane.showInputDialog("NO TELPON / HP");  //INPUT NOMOR TELEPON
                         nomor[x] = hp;
                         salah = false;
-                        if (hp.length() > 13) {
+                        if (hp.length() > 13) {    //JIKA NOMOR LEBIH DARI 13 DIGIT
                             JOptionPane.showMessageDialog(null, "KELEBIHAN, INPUT DENGAN BENAR");
                             salah = true;
                         }
-                        if (hp.length() > 1) {
+                        if (hp.length() > 1) {    //JIKA ADA NOMOR  
                             tmt = tmt + 1;
                         }
 
                     } while (salah);
 
                     do {
-                        st = JOptionPane.showInputDialog("STATUS PEMILIK(NIKAH/BELUM) \n"
+                        st = JOptionPane.showInputDialog("STATUS PEMILIK(NIKAH/BELUM) \n"  //INPUT STATUS
                                 + "[N/B]");
                     } while (!("N".equals(st) || "B".equals(st) || "n".equals(st) || "b".equals(st)));
                     status[x] = st;
 
-                    if ("N".equals(st) || "n".equals(st)) {
+                    if ("N".equals(st) || "n".equals(st)) {    //IF UNTUK KETERANGAN PILIHAN
                         ket6 = "NIKAH";
                     } else {
                         ket6 = "BELUM";
                     }
 
                     do {
-                        ks = JOptionPane.showInputDialog("KERJASAMA DENGAN PERUSAHAAN/ORANGLAIN \n"
+                        ks = JOptionPane.showInputDialog("KERJASAMA DENGAN PERUSAHAAN/ORANGLAIN \n" //INPUT KERJASAMA
                                 + "[Y/T]");
                     } while (!("Y".equals(ks) || "T".equals(ks) || "y".equals(ks) || "t".equals(ks)));
                     kerjasama[x] = ks;
-                    if ("Y".equals(ks) || "y".equals(ks)) {
+                    if ("Y".equals(ks) || "y".equals(ks)) {  //IF UNTUK KETERANGAN PILIHAN
                         ket7 = "ADA KERJASAMA";
                         ak = ak + 1;
                     } else {
                         ket7 = "TIDAK ADA KERJASAMA";
                         tk = tk + 1;
-                    }
+                    }                            //REKAP DATA YANG DIINPUT
                     hasil += "                                             DATA PEDAGANG           \n";
                     hasil += "==========================================================\n";
                     hasil += "NAMA TOKO = " + nama[x] + "\n";
