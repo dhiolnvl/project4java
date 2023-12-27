@@ -8,13 +8,13 @@ public class HAPUS {
 
     static void hapus() {
         do {
-            if (x == -1) {
+            if (x == -1) {            //JIKA DATA BELUM DIINPUT
                 JOptionPane.showMessageDialog(null, "TIDAK ADA DATA");
                 ulang = "t";
-            } else {
+            } else {                 //JIKA DATA SUDAH DIINPUT
                 do {
                     try {
-                        dh = JOptionPane.showInputDialog(" DATA YANG AKAN DIHAPUS [1 - " + (x + 1) + "]");
+                        dh = JOptionPane.showInputDialog(" DATA YANG AKAN DIHAPUS [1 - " + (x + 1) + "]");//MEMILIH DATA YANG AKAN DIHAPUS
                         nh = Integer.parseInt(dh);
                         putar = false;
                     } catch (Exception e) {
@@ -22,7 +22,7 @@ public class HAPUS {
                         putar = true;
                     }
                 } while (putar || (!(nh >= 1 && nh <= (x + 1))));
-
+                //IDENTIFIKASI KETERANGAN
                 switch (jenus[nh - 1]) {
                     case "1": {
                         ket = "PAKAIAN";
@@ -121,7 +121,7 @@ public class HAPUS {
                     ket7 = "ADA KERJASAMA";
                 } else {
                     ket7 = "TIDAK ADA KERJASAMA";
-                }
+                }                                    //REKAP DATA YANG DIHAPUS
                 hasil += "                                             DATA PEDAGANG           \n";
                 hasil += "==========================================================\n";
                 hasil += "NAMA TOKO = " + nama[nh - 1] + "\n";
@@ -141,7 +141,7 @@ public class HAPUS {
 
                 JOptionPane.showMessageDialog(null, hasil, "LAPORAN DATA PEDAGANG NO " + nh + " YANG AKAN DIHAPUS", JOptionPane.INFORMATION_MESSAGE);
                 hasil = "";
-                if (nh >= 1 && nh < x + 1) {
+                if (nh >= 1 && nh < x + 1) {            //MENGHAPUS DATA
                     for (int n = nh; n <= x; n = n + 1) {
                         nama[n - 1] = nama[n];
                         alamat[n - 1] = alamat[n];
@@ -162,7 +162,7 @@ public class HAPUS {
                     ulang = JOptionPane.showInputDialog("HAPUS DATA LAGI [Y/T]");
                     x = x - 1;
                     no = no - 1;
-                    if (x < 0) {
+                    if (x < 0) {        //JIKA DATA SUDAH HABIS
                         JOptionPane.showMessageDialog(null, "DATA HABIS");
                     }
                 } while (!("Y".equals(ulang) | "y".equals(ulang) | "t".equals(ulang) | "T".equals(ulang)));
