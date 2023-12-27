@@ -8,15 +8,15 @@ public class EDIT {
 
     static void edit() {
         do {
-            if (x == -1) {
+            if (x == -1) {                    //JIKA DATA BELUM DIINPUT
                 JOptionPane.showMessageDialog(null, "TIDAK ADA DATA");
                 ulang = "t";
-            } else {
+            } else {                           //JIKA DATA SUDAH DIINPUT
                 do {
                     try {
                         do {
                             ruang = true;
-                            nr = JOptionPane.showInputDialog("NOMOR RUANG [1 - " + (x + 1) + "]");
+                            nr = JOptionPane.showInputDialog("NOMOR RUANG [1 - " + (x + 1) + "]"); //MEMILIH DATA YANG AKAN DI EDIT
                             ed = Integer.parseInt(nr);
                             if (ed >= 1 & (ed <= x + 1)) {
                                 ruang = false;
@@ -127,7 +127,7 @@ public class EDIT {
                     ket7 = "ADA KERJASAMA";
                 } else {
                     ket7 = "TIDAK ADA KERJASAMA";
-                }
+                }                                    //REKAP DATA
                 hasil += "                                             DATA PEDAGANG           \n";
                 hasil += "==========================================================\n";
                 hasil += "NAMA TOKO    = " + nama[ed- 1] + "\n";
@@ -148,7 +148,7 @@ public class EDIT {
                 JOptionPane.showMessageDialog(null, hasil, "LAPORAN DATA PEDAGANG NO " + ed + " YANG AKAN DIEDIT", JOptionPane.INFORMATION_MESSAGE);
                 hasil = "";
 
-                edit = JOptionPane.showInputDialog("DATA YANG AKAN DIEDIT \n"
+                edit = JOptionPane.showInputDialog("DATA YANG AKAN DIEDIT \n" //MEMILIH APA YANG AKAN DIEDIT
                         + "1. NAMA TOKO \n"
                         + "2. ALAMAT \n"
                         + "3. NAMA PEMILIK \n"
@@ -165,22 +165,22 @@ public class EDIT {
                         + "14. EDIT KESELURUHAN \n"
                         + "[PILIH 1-14]");
                 switch (edit) {
-                    case "1": {
-                        na = JOptionPane.showInputDialog("NAMA TOKO");
+                    case "1": {        //MENGEDIT NAMA TOKO
+                        na = JOptionPane.showInputDialog("NAMA TOKO"); 
                         nama[ed - 1] = na;
                         break;
                     }
-                    case "2": {
+                    case "2": {        //MENGEDIT ALAMAT
                         al = JOptionPane.showInputDialog("ALAMAT");
                         alamat[ed - 1] = al;
                         break;
                     }
-                    case "3": {
+                    case "3": {        //MENGEDIT NAMA PEMILIK
                         np = JOptionPane.showInputDialog("NAMA PEMILIK");
                         pemilik[ed - 1] = np;
                         break;
                     }
-                    case "4": {
+                    case "4": {        //MENGEDIT JENIS USAHA
                         do {
                             jenis = JOptionPane.showInputDialog("JENIS USAHA \n"
                                     + "1. PAKAIAN \n"
