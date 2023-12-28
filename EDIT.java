@@ -32,42 +32,34 @@ public class EDIT {
                 switch (jenus[ed - 1]) {
                     case "1": {
                         ket = "PAKAIAN";
-                        p = p + 1;
                         break;
                     }
                     case "2": {
                         ket = "SARUNG";
-                        s = s + 1;
                         break;
                     }
                     case "3": {
                         ket = "MAKANAN";
-                        m = m + 1;
                         break;
                     }
                     case "4": {
                         ket = "SEPATU/TAS";
-                        spt = spt + 1;
                         break;
                     }
                     case "5": {
                         ket = "ELEKTRONIK";
-                        e = e + 1;
                         break;
                     }
                     case "6": {
                         ket = "BARANG BEKAS";
-                        bb = bb + 1;
                         break;
                     }
                     case "7": {
                         ket = "BAHAN POKOK";
-                        bp = bp + 1;
                         break;
                     }
                     case "8": {
                         ket = "LAIN-LAIN";
-                        ll = ll + 1;
                         break;
                     }
                 }
