@@ -23,7 +23,7 @@ public class project4 {
     static String kerjasama[] = new String[20];
 
     public static void main(String[] args) {
-        INPUT.data();
+        INPUT.data();    //INPUT TEMPAT DAN TANGGAL
         do {
             mn = JOptionPane.showInputDialog("  MENU SISTEM PEDAGANG \n" //MENU SISTEM PEDAGANG
                     + "      KOTA PEKALONGAN \n"
