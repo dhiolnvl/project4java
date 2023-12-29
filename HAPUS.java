@@ -22,7 +22,7 @@ public class HAPUS {
                         putar = true;
                     }
                 } while (putar || (!(nh >= 1 && nh <= (x + 1))));
-                //IDENTIFIKASI KETERANGAN
+                                        //IDENTIFIKASI KETERANGAN JENIS USAHA
                 switch (jenus[nh - 1]) {
                     case "1": {
                         ket = "PAKAIAN";
@@ -65,7 +65,7 @@ public class HAPUS {
                         break;
                     }
                 }
-
+                            //IDENTIFIKASI KETERANGAN PENJUALAN
                 if ("D".equals(penjualan[nh - 1]) || "d".equals(penjualan[nh - 1])) {
                     ket2 = "DALAM NEGERI";
                 } else if ("L".equals(penjualan[nh - 1]) || "l".equals(penjualan[nh - 1])) {
@@ -73,7 +73,7 @@ public class HAPUS {
                 } else {
                     ket2 = "DALAM DAN LUAR NEGERI";
                 }
-
+                            //IDENTIFIKASI KETERANGAN PEMBELIAN
                 if ("D".equals(pembelian[nh - 1]) || "d".equals(pembelian[nh - 1])) {
                     ket3 = "DOMESTIK";
                 } else if ("L".equals(pembelian[nh - 1]) || "l".equals(pembelian[nh - 1])) {
@@ -81,13 +81,13 @@ public class HAPUS {
                 } else {
                     ket3 = "CAMPURAN";
                 }
-
+                            //IDENTIFIKASI KETERANGAN CABANG
                 if ("T".equals(cabang[nh - 1]) || "t".equals(cabang[nh - 1])) {
                     ket4 = "TIDAK ADA";
                 } else {
                     ket4 = "ADA";
                 }
-
+                            //IDENTIFIKASI KETERANGAN SOSMED
                 switch (sosmed[nh - 1]) {
                     case "1": {
                         ket5 = "FACEBOOK";
@@ -110,13 +110,13 @@ public class HAPUS {
                         break;
                     }
                 }
-
+                            //IDENTIFIKASI KETERANGAN STATUS
                 if ("N".equals(status[nh - 1]) || "n".equals(status[nh - 1])) {
                     ket6 = "NIKAH";
                 } else {
                     ket6 = "BELUM";
                 }
-
+                            //IDENTIFIKASI KETERANGAN KERJASAMA
                 if ("Y".equals(kerjasama[nh - 1]) || "y".equals(kerjasama[nh - 1])) {
                     ket7 = "ADA KERJASAMA";
                 } else {
