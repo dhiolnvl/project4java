@@ -183,7 +183,7 @@ public class EDIT {
                                     + "6. BARANG BEKAS \n"
                                     + "7. BAHAN POKOK \n"
                                     + "8. LAIN-LAIN \n");
-                            switch (jenis) {
+                            switch (jenis) {         //SWITCH CASE UNTUK KETERANGAN PILIHAN
                                 case "1": {
                                     ket = "PAKAIAN";
                                     break;
@@ -243,8 +243,8 @@ public class EDIT {
                                     + "S. DALAM DAN LUAR NEGERI \n");
                         } while (!("D".equals(pj) || "L".equals(pj) || "S".equals(pj) || "d".equals(pj) || "l".equals(pj) || "s".equals(pj)));
                         penjualan[ed - 1] = pj;
-
-                        if ("D".equals(pj) || "d".equals(pj)) {
+                        
+                        if ("D".equals(pj) || "d".equals(pj)) {  //IF UNTUK KETERANGAN PILIHAN
                             ket2 = "DALAM NEGERI";
                         } else if ("L".equals(pj) || "l".equals(pj)) {
                             ket2 = "LUAR NEGERI";
@@ -263,7 +263,7 @@ public class EDIT {
                         } while (!("D".equals(pb) || "L".equals(pb) || "C".equals(pb) || "d".equals(pb) || "l".equals(pb) || "c".equals(pb)));
                         pembelian[ed - 1] = pb;
 
-                        if ("D".equals(pb) || "d".equals(pb)) {
+                        if ("D".equals(pb) || "d".equals(pb)) {    //IF UNTUK KETERANGAN PILIHAN
                             ket3 = "DOMESTIK";
                         } else if ("L".equals(pb) || "l".equals(pb)) {
                             ket3 = "LUAR";
@@ -279,7 +279,7 @@ public class EDIT {
                         } while (!("T".equals(cb) || "A".equals(cb) || "t".equals(cb) || "a".equals(cb)));
                         cabang[ed - 1] = cb;
 
-                        if ("T".equals(cb) || "t".equals(cb)) {
+                        if ("T".equals(cb) || "t".equals(cb)) {    //IF UNTUK KETERANGAN PILIHAN
                             ket4 = "TIDAK ADA";
                         } else {
                             ket4 = "ADA";
@@ -295,7 +295,7 @@ public class EDIT {
                         do {
                             sm = JOptionPane.showInputDialog("SOSIAL MEDIA \n"
                                     + "1. FACEBOOK  \n2. WHATSAPP  \n3. INSTAGRAM  \n4. TELEGRAM  \n5. DLL");
-                            switch (sm) {
+                            switch (sm) {          //SWITCH CASE UNTUK KETERANGAN PILIHAN
                                 case "1": {
                                     ket5 = "FACEBOOK";
                                     break;
@@ -341,7 +341,7 @@ public class EDIT {
                         } while (!("N".equals(st) || "B".equals(st) || "n".equals(st) || "b".equals(st)));
                         status[ed - 1] = st;
 
-                        if ("N".equals(st) || "n".equals(st)) {
+                        if ("N".equals(st) || "n".equals(st)) {    //IF UNTUK KETERANGAN PILIHAN
                             ket6 = "NIKAH";
                         } else {
                             ket6 = "BELUM";
@@ -354,7 +354,8 @@ public class EDIT {
                                     + "[Y/T]");
                         } while (!("Y".equals(ks) || "T".equals(ks) || "y".equals(ks) || "t".equals(ks)));
                         kerjasama[ed - 1] = ks;
-                        if ("Y".equals(ks) || "y".equals(ks)) {
+                        
+                        if ("Y".equals(ks) || "y".equals(ks)) {    //IF UNTUK KETERANGAN PILIHAN
                             ket7 = "ADA KERJASAMA";
                         } else {
                             ket7 = "TIDAK ADA KERJASAMA";
