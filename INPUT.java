@@ -34,7 +34,39 @@ public class INPUT {
                 salah = true;
             }
         } while (salah);
-
+       if (bln == 1) {          //IF UNTUK KETERANGAN BULAN
+            kett = "JANUARI";
+        }
+       if (bln == 2) {
+            kett = "FEBRUARI";
+        }
+       if (bln == 3) {
+            kett = "MARET";
+        }
+       if (bln == 4) {
+            kett = "APRIL";
+        }
+       if (bln == 5) {
+            kett = "MEI";
+        }
+       if (bln == 6) {
+            kett = "JUNI";
+        }
+       if (bln == 7) {
+            kett = "JULI";
+        }
+       if (bln == 8) {
+            kett = "AGUSTUS";
+        }
+       if (bln == 9) {
+            kett = "SEPTEMBER";
+        }
+       if (bln == 10) {
+            kett = "OKTOBER";
+        }
+        if (bln == 11) {
+            kett = "NOVEMBER";
+        }
         if (bln == 12) {
             kett = "DESEMBER";
         }
@@ -271,7 +303,7 @@ public class INPUT {
                     do {
                         ulang = JOptionPane.showInputDialog("INPUT DATA LAGI [Y/T]");  //INPUT ULANG DATA
 
-                        if (x == 19) {
+                        if (x == 19) {         //JIKA DATA ADA 20
                             JOptionPane.showMessageDialog(null, "DATA SUDAH PENUH");
                             ulang = "T";
                         }
