@@ -7,12 +7,13 @@ import static projectk4.INPUT.*;    //MENGAMBIL ARRAY DAN VARIABEL DARI CLASS IN
 public class LAU {
 
     static void alamat() {
-        if (x == -1) {
+        if (x == -1) {        //JIKA DATA BELUM DI INPUT
             JOptionPane.showMessageDialog(null, "TIDAK ADA DATA");
             ulang = "t";
-        } else {
-            sisa = (x + 1) % 6;
-            if (sisa == 0) {
+        } else {        //JIKA DATA SUDAH DI INPUT
+            
+            sisa = (x + 1) % 6;        //UNTUK HALAMAN PADA LAPORAN
+            if (sisa == 0) {        
                 hal = (x + 1) / 6;
             } else {
                 hal = ((x + 1) / 6) + 1;
@@ -26,7 +27,7 @@ public class LAU {
             }
             
             for (int h = 1; h <= hal; h = h + 1) {
-                tme = 0;
+                tme = 0;        //RESET VARIABEL
                 tmt = 0;
                 z = 0;
                 fb = 0;
@@ -34,6 +35,7 @@ public class LAU {
                 ig = 0;
                 tele = 0;
                 dll = 0;
+                            //LAPORAN ALAMAT USAHA
                 rekap += "HAL : " + h + "                                                   TANGGAL : " + tgl + "/" + bln + "/" + thn + "\n";
                 rekap += "======================================================= \n";
                 rekap += " NO   NAMA TOKO       MEDIA SOSIAL       EMAIL      TELPON/HP\n";
@@ -45,7 +47,7 @@ public class LAU {
                     g = g + 1;
                     z = z + 1;
 
-                    switch (sosmed[d - 1]) {
+                    switch (sosmed[d - 1]) {    //SWICTH CASE UNTUK KETERANGAN PILIHAN PERHALAMAN
                         case "1": {
                             ket5 = "FACEBOOK";
                             fb = fb + 1;
@@ -73,7 +75,7 @@ public class LAU {
                         }
                     }
                     
-                    if (email[d-1].length() > 1) {
+                    if (email[d-1].length() > 1) {    //IF UNTUK RUMUS REKAP EMAIL DAN TELEPON
                         tme = tme + 1;
                     }
                     if (nomor[d-1].length() > 1) {
@@ -99,10 +101,10 @@ public class LAU {
     }
 
     static void rekapalamat() {
-        if (x == -1) {
+        if (x == -1) {        //JIKA DATA BELUM DI INPUT
             ulang = "t";
-        } else {
-            tme = 0;
+        } else {              //JIKA DATA SUDAH DI INPUT
+            tme = 0;          //RESET VARIABEL
             tmt = 0;
             fb = 0;
             wa = 0;
@@ -110,7 +112,7 @@ public class LAU {
             tele = 0;
             dll = 0;
             for (int y = 0; y <= x; y = y + 1) {
-                switch (sosmed[y]) {
+                switch (sosmed[y]) {        //SWITCH CASE UNTUK KETERANGAN PILIHAN
                     case "1": {
                         ket5 = "FACEBOOK";
                         fb = fb + 1;
@@ -144,7 +146,7 @@ public class LAU {
                         tmt = tmt + 1;
                         }
 
-            }
+            }             
             rekap += "======================================================= \n";
             rekap += " TOTAL KESELURUHAN      EMAIL = " + tme + "       TELPON = " + tmt + "\n";
             rekap += " TOTAL MEDIA SOSIAL : " + "\n";
@@ -156,10 +158,10 @@ public class LAU {
     }
 
     static void rekapalamat2() {
-        if (x == -1) {
+        if (x == -1) {    //JIKA DATA BELUM DI INPUT
             JOptionPane.showMessageDialog(null, "TIDAK ADA DATA");
             ulang = "t";
-        } else {
+        } else {    //JIKA DATA SUDAH DI INPUT
             
             sisa = (x + 1) % 6;
             if (sisa == 0) {
@@ -181,7 +183,7 @@ public class LAU {
                 wa = 0;
                 ig = 0;
                 tele = 0;
-                dll = 0;
+                dll = 0;            //LAPORAN ALAMAT USAHA HALAMAN TERAKHIR
                 rekap += "                LAPORAN ALAMAT PEDAGANG DI " + tempat + "\n";
                 rekap += "                          PEKALONGAN BULAN " + kett + " TAHUN " + tahun + "\n";
                 rekap += "HAL : " + h + "\n";
@@ -194,7 +196,7 @@ public class LAU {
                 for (int d = x1; d <= x2; d = d + 1) {
                     g = g + 1;
                     z = z + 1;
-                    if ("N".equals(status[d - 1]) || "n".equals(status[d - 1])) {
+                    if ("N".equals(status[d - 1]) || "n".equals(status[d - 1])) {    //IF UNTUK KETERANGAN PERHALAMAN
                         ket6 = "NIKAH";
                     } else {
                         ket6 = "BELUM";
