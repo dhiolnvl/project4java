@@ -7,11 +7,12 @@ import static projectk4.INPUT.*;    //MENGAMBIL ARRAY DAN VARIABEL DARI CLASS IN
 public class LIM {
 
     static void inovasi() {
-        if (x == -1) {
+        if (x == -1) {        //JIKA DATA BELUM DI INPUT
             JOptionPane.showMessageDialog(null, "TIDAK ADA DATA");
             ulang = "t";
-        } else {
-            sisa = (x + 1) % 8;
+        } else {             //JIKA DATA SUDAH DI INPUT
+            
+            sisa = (x + 1) % 8;        //UNTUK HALAMAN PADA LAPORAN
             if (sisa == 0) {
                 hal = (x + 1) / 8;
             } else {
@@ -27,7 +28,7 @@ public class LIM {
             z = 0;
             for (int h = 1; h <= hal; h = h + 1) {
                 ak = 0;
-                tk = 0;
+                tk = 0;                        //LAPORAN INOVASI MAHASISWA
                 rekap += "HAL : " + h + "                           TANGGAL : " + tgl + "/" + bln + "/" + thn + "\n";
                 rekap += "========================================== \n";
                 rekap += " NO   NAMA TOKO       KERJA SAMA              \n";
@@ -38,7 +39,7 @@ public class LIM {
                 for (int d = x1; d <= x2; d = d + 1) {
                     g = g + 1;
                     z = z + 1;
-
+                                        //IF UNTUK KETERANGAN PILIHAN PERHALAMAN
                     if ("Y".equals(kerjasama[d - 1]) || "y".equals(kerjasama[d - 1])) {
                         ket7 = "ADA KERJASAMA";
                         ak = ak + 1;
