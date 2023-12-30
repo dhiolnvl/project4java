@@ -7,12 +7,12 @@ import static projectk4.INPUT.*;    //MENGAMBIL ARRAY DAN VARIABEL DARI CLASS IN
 public class LDP {
 
     static void laporandata() {
-        if (x == -1) {
+        if (x == -1) {        //JIKA DATA BELUM DI INPUT
             JOptionPane.showMessageDialog(null, "TIDAK ADA DATA");
             ulang = "t";
-        } else {
+        } else {            //JIKA DATA SUDAH DI INPUT
 
-            sisa = (x + 1) % 4;
+            sisa = (x + 1) % 4;            //UNTUK HALAMAN PADA LAPORAN
             if (sisa == 0) {
                 hal = (x + 1) / 4;
             } else {
@@ -27,7 +27,7 @@ public class LDP {
             }
             z = 0;
             for (int h = 1; h <= hal; h = h + 1) {
-                p = 0;
+                p = 0;            //RESET VARIABEL
                 s = 0;
                 m = 0;
                 bb = 0;
@@ -35,9 +35,8 @@ public class LDP {
                 bp = 0;
                 e = 0;
                 ll = 0;
-
                 g = 0;
-
+                                //LAPORAN DATA PEDAGANG
                 rekap += "TANGGAL : " + tgl + "/" + bln + "/" + thn + "                                                 HAL : " + h + "\n";
                 rekap += "======================================================= \n";
                 rekap += " NO   NAMA TOKO       ALAMAT       NAMA PEMILIK      JENIS USAHA \n";
@@ -48,7 +47,7 @@ public class LDP {
                 for (int d = x1; d <= x2; d = d + 1) {
                     g = g + 1;
                     z = z + 1;
-                    switch (jenus[d - 1]) {
+                    switch (jenus[d - 1]) {      //SWICTH CASE UNTUK KETERANGAN PILIHAN PERHALAMAN
                         case "1": {
                             ket = "PAKAIAN";
                             p = p + 1;
@@ -111,10 +110,10 @@ public class LDP {
     }
 
     static void rekapdata() {
-        if (x == -1) {
+        if (x == -1) {        //JIKA DATA BELUM DI INPUT
             ulang = "t";
-        } else {
-            p = 0;
+        } else {            //JIKA DATA SUDAH DI INPUT
+            p = 0;        //RESET VARIABEL
             s = 0;
             m = 0;
             bb = 0;
@@ -124,7 +123,7 @@ public class LDP {
             ll = 0;
 
             for (int y = 0; y <= x; y = y + 1) {
-                switch (jenus[y]) {
+                switch (jenus[y]) {            //SWITCH CASE UNTUK KETERANGAN PILIHAN
                     case "1": {
                         ket = "PAKAIAN";
                         p = p + 1;
@@ -167,7 +166,7 @@ public class LDP {
                     }
                 }
 
-            }
+            }                    //LAPORAN DATA PEDAGANG HALAMAN TERAKHIR
             hr = hr + 1;
             rekap += "TANGGAL : " + tgl + "/" + bln + "/" + thn + "                                                 HAL : " + hr + "\n"; //HALAMAN AKHIR
             rekap += "======================================================= \n";
