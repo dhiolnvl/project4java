@@ -7,11 +7,12 @@ import static projectk4.INPUT.*;    //MENGAMBIL ARRAY DAN VARIABEL DARI CLASS IN
 public class LST {
 
     static void statistik() {
-        if (x == -1) {
+        if (x == -1) {        //JIKA DATA BELUM DI INPUT
             JOptionPane.showMessageDialog(null, "TIDAK ADA DATA");
             ulang = "t";
-        } else {
-            sisa = (x + 1) % 4;
+        } else {             //JIKA DATA SUDAH DI INPUT
+            
+            sisa = (x + 1) % 4;                //UNTUK HALAMAN PADA LAPORAN
             if (sisa == 0) {
                 hal = (x + 1) / 4;
             } else {
@@ -26,7 +27,7 @@ public class LST {
             }
             g = 0;
             for (int h = 1; h <= hal; h = h + 1) {
-                z = 0;
+                z = 0;            //RESET VARIABEL
                 bnd = 0;
                 bnc = 0;
                 bnl = 0;
@@ -36,6 +37,7 @@ public class LST {
                 cnt = 0;
                 cna = 0;
                 tnmo = 0;
+                                        //LAPORAN STATISTIK PEDAGANG
                 rekap += "TANGGAL : " + tgl + "/" + bln + "/" + thn + "                                                 HAL : " + h + "\n";
                 rekap += "======================================================= \n";
                 rekap += " NO   NAMA TOKO       MODAL       PENJUALAN      PEMBELI     CABANG \n";
@@ -44,7 +46,7 @@ public class LST {
                     x2 = (x + 1);
                 }
                 for (int d = x1; d <= x2; d = d + 1) {
-                    z = z + 1;
+                    z = z + 1;                        //IF UNTUK KETERANGAN PERHALAMAN
                     if ("D".equals(penjualan[d - 1]) || "d".equals(penjualan[d - 1])) {
                         ket2 = "DALAM NEGERI";
                         jnd = jnd + 1;
@@ -97,10 +99,10 @@ public class LST {
     }
 
     static void rekapstatistik() {
-        if (x == -1) {
+        if (x == -1) {     //JIKA DATA BELUM DI INPUT
             ulang = "t";
-        } else {
-            bnd = 0;
+        } else {          //JIKA DATA SUDAH DI INPUT
+            bnd = 0;    //RESET VARIABEL
             bnc = 0;
             bnl = 0;
             jnd = 0;
@@ -111,7 +113,7 @@ public class LST {
             tnmo = 0;
             for (int y = 0; y <= x; y = y + 1) {
                 g = g + 1;
-                if ("D".equals(penjualan[y]) || "d".equals(penjualan[y])) {
+                if ("D".equals(penjualan[y]) || "d".equals(penjualan[y])) {  //IF UNTUK KETERANGAN PILIHAN
                     ket2 = "DALAM NEGERI";
                     jnd = jnd + 1;
                 } else if ("L".equals(penjualan[y]) || "l".equals(penjualan[y])) {
@@ -143,7 +145,7 @@ public class LST {
                 tnmo = tnmo + modal[y];
             }
             rnmo = (rnmo + tnmo) / g;
-            hr = hr + 1;
+            hr = hr + 1;                                //LAPORAN STATISTIK PEDAGANG HALAMAN TERAKHIR
             rekap += "TANGGAL : " + tgl + "/" + bln + "/" + thn + "                                                 HAL : " + hr + "\n"; //HALAMAN AKHIR
             rekap += "======================================================= \n";
             rekap += " PEMBELI      :   D = " + bnd + "\n";
